@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sayeduzzman Emon – Full-Stack Web Developer portfolio showcasing projects, skills, and experience." />
+  <title>Sayeduzzman Emon | Full-Stack Developer</title>
+
+  <!-- Google Fonts: Space Grotesk (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Devicon: tech-stack icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <!-- Logo / brand -->
+      <a href="#hero" class="nav-logo" aria-label="Home">
+        <span class="logo-bracket">&lt;</span>Emon<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <!-- Desktop nav links -->
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#about"        class="nav-link">About</a></li>
+        <li><a href="#projects"     class="nav-link">Projects</a></li>
+        <li><a href="#skills"       class="nav-link">Skills</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
+        <li><a href="#experience"   class="nav-link">Experience</a></li>
+        <li><a href="#education"    class="nav-link">Education</a></li>
+        <li><a href="#contact"      class="nav-link">Contact</a></li>
+      </ul>
+      <!-- dark mode toggle -->
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section class="hero" id="hero" aria-label="Introduction">
+    <!-- Animated background grid -->
+    <div class="hero-grid" aria-hidden="true"></div>
+    <!-- Floating orbs for depth -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+    <div class="orb orb-3" aria-hidden="true"></div>
+
+    <div class="hero-container">
+      <!-- Left: text content -->
+      <div class="hero-text">
+        <p class="hero-eyebrow">// Hello, World!</p>
+
+        <h1 class="hero-name">
+          Sayeduzzman<br />
+          <span class="name-accent">Emon</span>
+        </h1>
+
+        <!-- Typewriter role display -->
+        <div class="hero-role" aria-live="polite">
+          <span class="role-prefix">&gt; </span>
+          <span class="typewriter" id="typewriter"></span>
+          <span class="cursor" aria-hidden="true">█</span>
+        </div>
+
+        <p class="hero-summary">
+          Recent Software Engineering graduate passionate about building scalable,
+          high-performance web applications. I craft clean code that makes the web
+          a better place — one component at a time.
+        </p>
+
+        <!-- CTA buttons -->
+        <div class="hero-cta">
+          <a href="https://drive.google.com/file/d/1p3_McAWwx9PLktDV0ZGw9yjz3dNSpLgP/view?usp=sharing"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download CV
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Contact Me
+          </a>
+          <a href="#projects" class="btn btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+            View Projects
+          </a>
+        </div>
+
+        <!-- Quick stats -->
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">2+</span>
+            <span class="stat-label">Full-Stack Projects</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-number">3.25</span>
+            <span class="stat-label">CGPA</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: profile image -->
+      <div class="hero-image-wrap">
+        <div class="hero-image-ring" aria-hidden="true"></div>
+        <div class="hero-image-container">
+          <!-- Using a professional placeholder; replace src with your actual photo -->
+          <img
+            src="images/profilepic.png"
+            alt="Sayeduzzman Emon – Full-Stack Web Developer"
+            class="hero-avatar"
+            width="340"
+            height="340"
+          />
+          <!-- Decorative floating tech badges -->
+          <div class="tech-badge badge-react"  aria-hidden="true">React</div>
+          <div class="tech-badge badge-next"   aria-hidden="true">Next.js</div>
+          <div class="tech-badge badge-laravel"aria-hidden="true">Laravel</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+      <div class="scroll-dot"></div>
+    </a>
+  </section>
+
+  <!-- ============================================================
+       ABOUT SECTION
+  ============================================================ -->
+  <section class="section" id="about" aria-label="About me">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">// Who I Am</p>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Bio card -->
+        <div class="glass-card about-bio">
+          <h3>My Story</h3>
+          <p>
+            I'm a Full-Stack Web Developer and recent Software Engineering graduate from
+            <strong>Daffodil International University</strong>. My journey started with
+            a fascination for how websites actually work under the hood — and since then,
+            I haven't stopped building.
+          </p>
+          <p>
+            I've led technical operations as a <strong>CTO at Gadgetaloy</strong>, designed
+            pixel-perfect UIs during my internship at FN Software, and shipped production-ready
+            full-stack applications using modern React/Next.js and Laravel stacks.
+          </p>
+          <p>
+            My goal is simple: build beautiful, performant web experiences that solve real
+            problems — with clean, maintainable code that future-you (and your teammates) will love.
+          </p>
+
+          <!-- Personal details grid -->
+          <div class="about-details">
+            <div class="detail-item">
+              <span class="detail-label">Location</span>
+              <span class="detail-value">Kafrul, Dhaka-1216, Bangladesh</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Email</span>
+              <a href="mailto:sayeduzzmanemon@gmail.com" class="detail-value detail-link">sayeduzzmanemon@gmail.com</a>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Phone</span>
+              <a href="tel:+8801798433656" class="detail-value detail-link">+880 1798 433 656</a>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Availability</span>
+              <span class="detail-value available-badge">Open to Work ✓</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech stack icons -->
+        <div class="glass-card about-stack">
+          <h3>Tech Stack</h3>
+          <div class="stack-grid">
+            <!-- Frontend -->
+            <div class="stack-group">
+              <p class="stack-category">Frontend</p>
+              <div class="stack-icons">
+                <div class="stack-icon-item" title="HTML5">
+                  <i class="devicon-html5-plain colored" aria-hidden="true"></i>
+                  <span>HTML5</span>
+                </div>
+                <div class="stack-icon-item" title="CSS3">
+                  <i class="devicon-css3-plain colored" aria-hidden="true"></i>
+                  <span>CSS3</span>
+                </div>
+                <div class="stack-icon-item" title="JavaScript">
+                  <i class="devicon-javascript-plain colored" aria-hidden="true"></i>
+                  <span>JS</span>
+                </div>
+                <div class="stack-icon-item" title="React">
+                  <i class="devicon-react-original colored" aria-hidden="true"></i>
+                  <span>React</span>
+                </div>
+                <div class="stack-icon-item" title="Next.js">
+                  <i class="devicon-nextjs-original" aria-hidden="true"></i>
+                  <span>Next.js</span>
+                </div>
+                <div class="stack-icon-item" title="Vue.js">
+                  <i class="devicon-vuejs-plain colored" aria-hidden="true"></i>
+                  <span>Vue.js</span>
+                </div>
+                <div class="stack-icon-item" title="Tailwind CSS">
+                  <i class="devicon-tailwindcss-plain colored" aria-hidden="true"></i>
+                  <span>Tailwind</span>
+                </div>
+                <div class="stack-icon-item" title="TypeScript">
+                  <i class="devicon-typescript-plain colored" aria-hidden="true"></i>
+                  <span>TypeScript</span>
+                </div>
+              </div>
+            </div>
+            <!-- Backend -->
+            <div class="stack-group">
+              <p class="stack-category">Backend</p>
+              <div class="stack-icons">
+                <div class="stack-icon-item" title="PHP">
+                  <i class="devicon-php-plain colored" aria-hidden="true"></i>
+                  <span>PHP</span>
+                </div>
+                <div class="stack-icon-item" title="Laravel">
+                  <i class="devicon-laravel-plain colored" aria-hidden="true"></i>
+                  <span>Laravel</span>
+                </div>
+                <div class="stack-icon-item" title="Node.js / Express">
+                  <i class="devicon-nodejs-plain colored" aria-hidden="true"></i>
+                  <span>Node.js</span>
+                </div>
+                <div class="stack-icon-item" title="Python">
+                  <i class="devicon-python-plain colored" aria-hidden="true"></i>
+                  <span>Python</span>
+                </div>
+                <div class="stack-icon-item" title="Java">
+                  <i class="devicon-java-plain colored" aria-hidden="true"></i>
+                  <span>Java</span>
+                </div>
+              </div>
+            </div>
+            <!-- Tools -->
+            <div class="stack-group">
+              <p class="stack-category">Tools & DB</p>
+              <div class="stack-icons">
+                <div class="stack-icon-item" title="MySQL">
+                  <i class="devicon-mysql-plain colored" aria-hidden="true"></i>
+                  <span>MySQL</span>
+                </div>
+                <div class="stack-icon-item" title="Git">
+                  <i class="devicon-git-plain colored" aria-hidden="true"></i>
+                  <span>Git</span>
+                </div>
+                <div class="stack-icon-item" title="GitHub">
+                  <i class="devicon-github-original" aria-hidden="true"></i>
+                  <span>GitHub</span>
+                </div>
+                <div class="stack-icon-item" title="VS Code">
+                  <i class="devicon-vscode-plain colored" aria-hidden="true"></i>
+                  <span>VS Code</span>
+                </div>
+                <div class="stack-icon-item" title="Postman">
+                  <i class="devicon-postman-plain colored" aria-hidden="true"></i>
+                  <span>Postman</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS SECTION
+  ============================================================ -->
+  <section class="section section-alt" id="projects" aria-label="Projects portfolio">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">// What I've Built</p>
+        <h2 class="section-title">My <span class="accent">Projects</span></h2>
+      </div>
+
+      <!-- Filter buttons -->
+      <div class="filter-bar" role="tablist" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="all"            role="tab" aria-selected="true">All Projects</button>
+        <button class="filter-btn"        data-filter="web-dev"        role="tab" aria-selected="false">Web Development</button>
+        <button class="filter-btn"        data-filter="web-design"     role="tab" aria-selected="false">Web Design</button>
+        <button class="filter-btn"        data-filter="app-dev"        role="tab" aria-selected="false">App Development</button>
+      </div>
+
+      <!-- Projects grid — populated via JS data array -->
+      <div class="projects-grid" id="projectsGrid" role="tabpanel" aria-label="Filtered projects"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SKILLS SECTION
+  ============================================================ -->
+  <section class="section" id="skills" aria-label="Skills">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">// What I Know</p>
+        <h2 class="section-title">My <span class="accent">Skills</span></h2>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Frontend Skills -->
+        <div class="glass-card skill-card">
+          <div class="skill-card-header">
+            <span class="skill-icon" aria-hidden="true">🎨</span>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-bars" id="frontendBars"></div>
+        </div>
+
+        <!-- Backend Skills -->
+        <div class="glass-card skill-card">
+          <div class="skill-card-header">
+            <span class="skill-icon" aria-hidden="true">⚙️</span>
+            <h3>Backend</h3>
+          </div>
+          <div class="skill-bars" id="backendBars"></div>
+        </div>
+
+        <!-- Database Skills -->
+        <div class="glass-card skill-card">
+          <div class="skill-card-header">
+            <span class="skill-icon" aria-hidden="true">🗄️</span>
+            <h3>Database</h3>
+          </div>
+          <div class="skill-bars" id="databaseBars"></div>
+        </div>
+
+        <!-- Tools & Platforms -->
+        <div class="glass-card skill-card">
+          <div class="skill-card-header">
+            <span class="skill-icon" aria-hidden="true">🛠️</span>
+            <h3>Tools & Platforms</h3>
+          </div>
+          <div class="skill-bars" id="toolsBars"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CERTIFICATES SECTION
+  ============================================================ -->
+  <section class="section section-alt" id="certificates" aria-label="Certifications and achievements">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">// Proof of Learning</p>
+        <h2 class="section-title">Certificates & <span class="accent">Achievements</span></h2>
+      </div>
+
+      <!-- Certificate cards — populated by JS -->
+      <div class="certs-grid" id="certsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Certificate Modal / Lightbox -->
+  <div class="modal-overlay" id="certModal" role="dialog" aria-modal="true" aria-label="Certificate details" hidden>
+    <div class="modal-container">
+      <button class="modal-close" id="modalClose" aria-label="Close certificate modal">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="modal-image-wrap">
+        <img id="modalImage" src="" alt="" class="modal-image" />
+      </div>
+      <div class="modal-details">
+        <p class="modal-org"    id="modalOrg"></p>
+        <h3 class="modal-title" id="modalTitle"></h3>
+        <p class="modal-course" id="modalCourse"></p>
+        <p class="modal-date"   id="modalDate"></p>
+        <a  class="btn btn-primary modal-link" id="modalLink" target="_blank" rel="noopener noreferrer">
+          View Certificate ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       EXPERIENCE SECTION  (Timeline)
+  ============================================================ -->
+  <section class="section" id="experience" aria-label="Work experience">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">// Where I've Worked</p>
+        <h2 class="section-title">Work <span class="accent">Experience</span></h2>
+      </div>
+
+      <div class="timeline" id="experienceTimeline" role="list"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EDUCATION SECTION
+  ============================================================ -->
+  <section class="section section-alt" id="education" aria-label="Education">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">// Where I Studied</p>
+        <h2 class="section-title">My <span class="accent">Education</span></h2>
+      </div>
+
+      <div class="education-grid" id="educationGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT SECTION
+  ============================================================ -->
+  <section class="section" id="contact" aria-label="Contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">// Let's Connect</p>
+        <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+        <p class="section-subtitle">
+          Whether you have a project in mind, a role to fill, or just want to say hi —
+          my inbox is always open.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact info cards -->
+        <div class="contact-info">
+          <div class="glass-card contact-card">
+            <a href="mailto:sayeduzzmanemon@gmail.com" class="contact-item" aria-label="Send email">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">sayeduzzmanemon@gmail.com</span>
+              </div>
+            </a>
+
+            <a href="tel:+8801798433656" class="contact-item" aria-label="Call phone number">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4a2 2 0 0 1 1.99-2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.44-.44a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Phone</span>
+                <span class="contact-value">+880 1798 433 656</span>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/iamsayeduzzman/" target="_blank" rel="noopener noreferrer"
+               class="contact-item" aria-label="Visit LinkedIn profile">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">iamsayeduzzman</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/iamSayeduzzman" target="_blank" rel="noopener noreferrer"
+               class="contact-item" aria-label="Visit GitHub profile">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">GitHub</span>
+                <span class="contact-value">iamSayeduzzman</span>
+              </div>
+            </a>
+
+            <div class="contact-item no-link">
+              <div class="contact-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="contact-text">
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Kafrul, Dhaka-1216, Bangladesh</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="glass-card contact-form-card">
+          <h3>Send a Message</h3>
+          <form id="contactForm" class="contact-form" novalidate aria-label="Contact form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Your Name</label>
+                <input type="text" id="contactName" name="name" placeholder="John Doe"
+                       autocomplete="name" required aria-required="true" />
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Your Email</label>
+                <input type="email" id="contactEmail" name="email" placeholder="john@example.com"
+                       autocomplete="email" required aria-required="true" />
+                <span class="form-error" role="alert"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Subject</label>
+              <input type="text" id="contactSubject" name="subject" placeholder="Project Inquiry"
+                     required aria-required="true" />
+              <span class="form-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message" rows="5"
+                        placeholder="Tell me about your project..." required aria-required="true"></textarea>
+              <span class="form-error" role="alert"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" hidden>Sending…</span>
+            </button>
+            <p class="form-success" id="formSuccess" hidden>
+              ✅ Message sent! I'll get back to you soon.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo" aria-label="Back to top">
+            <span class="logo-bracket">&lt;</span>Emon<span class="logo-bracket">/&gt;</span>
+          </a>
+          <p>Full-Stack Web Developer crafting clean, scalable web solutions from Dhaka, Bangladesh.</p>
+          <div class="footer-social">
+            <a href="https://github.com/iamSayeduzzman" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/iamsayeduzzman/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="mailto:sayeduzzmanemon@gmail.com" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick nav -->
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <ul role="list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Tech focus -->
+        <div class="footer-nav">
+          <h4>Tech Focus</h4>
+          <ul role="list">
+            <li><a href="#skills">React / Next.js</a></li>
+            <li><a href="#skills">Laravel / PHP</a></li>
+            <li><a href="#skills">Vue.js</a></li>
+            <li><a href="#skills">REST APIs</a></li>
+            <li><a href="#skills">MySQL</a></li>
+            <li><a href="#skills">Tailwind CSS</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="footerYear"></span> Sayeduzzman Emon. All rights reserved.</p>
+        <p>Built with ♡ and Vanilla JS</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back-to-top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" hidden>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
