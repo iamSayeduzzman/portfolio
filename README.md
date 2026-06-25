@@ -64,4 +64,3 @@ Simply open the `index.html` file in your favorite web browser. No local server 
 *Built with ♡ and Vanilla JS*
 
 
-```
