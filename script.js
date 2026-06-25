@@ -264,29 +264,28 @@ function renderEducation() {
   const educationGrid = document.getElementById("educationGrid");
 
   educationGrid.innerHTML = educationData.map((edu) => `
-    <div class="edu-card" style="display: flex; flex-direction: column; gap: 10px; padding: 30px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; width: 100%; max-width: 750px; margin: 0 auto;">
+    <div class="edu-card" style="display: flex; flex-direction: column; gap: 10px; padding: 30px; background: rgba(230, 126, 34, 0.96); border: 1px solid #00d4ff; border-radius: 20px; width: 100%; max-width: 750px; margin: 0 auto; box-shadow: 0 10px 30px rgba(230, 126, 34, 0.2);">
       
-      <h3 style="color: #00d4ff; font-size: 1.6rem; margin: 0;">${edu.degree}</h3>
+      <h3 style="color: #ffffff; font-size: 1.6rem; margin: 0;">${edu.degree}</h3>
       
-      <h4 style="color: #fff; font-size: 1.2rem; margin: 0;">${edu.institution}</h4>
+      <h4 style="color: #000000; font-size: 1.2rem; margin: 0;">${edu.institution}</h4>
       
-      <div style="display: inline-block; background: rgba(0, 212, 255, 0.1); color: #00d4ff; padding: 6px 15px; border-radius: 20px; font-size: 0.9rem; width: fit-content; margin: 5px 0;">
+      <div style="display: inline-block; background: rgba(255, 255, 255, 0.2); color: #ffffff; padding: 6px 15px; border-radius: 20px; font-size: 0.9rem; width: fit-content; margin: 5px 0;">
         📅 ${edu.duration}
       </div>
       
-      <p style="margin: 5px 0 0 0; color: #ccc; font-size: 1.1rem;">
-        <strong>CGPA:</strong> <span style="color: #fff;">${edu.cgpa}</span>
+      <p style="margin: 5px 0 0 0; color: #000000; font-size: 1.1rem;">
+        <strong>CGPA:</strong> <span style="color: #ffffff; font-weight: bold;">${edu.cgpa}</span>
       </p>
       
-      <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
-        <strong style="color: #00d4ff; display: block; margin-bottom: 8px; font-size: 1.1rem;">Final Year Project:</strong>
-        <p style="margin: 0; color: #aaa; line-height: 1.6; font-size: 1rem;">${edu.project}</p>
+      <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.3);">
+        <strong style="color: #ffffff; display: block; margin-bottom: 8px; font-size: 1.1rem;">Final Year Project:</strong>
+        <p style="margin: 0; color: #000000; line-height: 1.6; font-size: 1rem;">${edu.project}</p>
       </div>
 
     </div>
   `).join("");
 }
-
 document.querySelectorAll(".filter-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"));
