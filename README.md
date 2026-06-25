@@ -3,7 +3,7 @@
 
 A modern, responsive, and fully dynamic personal portfolio website built with Vanilla HTML, CSS, and JavaScript. The design features a beautiful "Dark space" glassmorphism theme with a smooth light/dark mode toggle.
 
-## 📌 Important Note / বিশেষ দ্রষ্টব্য
+## 📌 Important Note 
 
 > **Feel free to copy, modify, or use this code for your own projects without any hesitation. However, in return, I would be really happy if you could drop a ⭐ on this repository and give me a follow on GitHub!** 
 
