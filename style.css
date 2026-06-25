@@ -64,26 +64,31 @@
 }
 
 /* ============================================================
-   LIGHT MODE VARIABLES
+   LIGHT MODE VARIABLES (Warm & Energetic)
 ============================================================ */
 [data-theme="light"] {
-  --clr-bg:          #f8f9fc;   /* Light background */
+  --clr-bg:          #fdfbfc;   /* Soft warm off-white */
   --clr-bg-alt:      #ffffff;   /* Pure white sections */
-  --clr-surface:     rgba(0, 0, 0, 0.03);  /* subtle card base */
-  --clr-surface-hov: rgba(0, 0, 0, 0.06);
+  --clr-surface:     rgba(230, 126, 34, 0.04); /* Subtle warm card base */
+  --clr-surface-hov: rgba(230, 126, 34, 0.08);
 
-  --clr-cyan:        #0088aa;   /* Darker cyan for white background */
-  --clr-cyan-dim:    rgba(0, 136, 170, 0.15);
-  --clr-cyan-glow:   rgba(0, 136, 170, 0.25);
-  --clr-violet:      #6d28d9;   /* Darker violet */
-  --clr-violet-dim:  rgba(109, 40, 217, 0.15);
+  /* Primary Accent: Energetic Orange/Terracotta */
+  --clr-cyan:        #e67e22;   /* Vibrant orange replacing cyan */
+  --clr-cyan-dim:    rgba(230, 126, 34, 0.12);
+  --clr-cyan-glow:   rgba(230, 126, 34, 0.22);
+  
+  /* Secondary Accent: Warm Amber/Gold */
+  --clr-violet:      #d35400;   /* Deep burnt orange/amber replacing violet */
+  --clr-violet-dim:  rgba(211, 84, 0, 0.12);
 
-  --clr-text:        #0f172a;   /* Dark text */
-  --clr-text-muted:  #475569;   /* Gray text */
-  --clr-text-faint:  #94a3b8;   /* Faint gray */
+  /* Typography: Rich Charcoal & Warm Slate */
+  --clr-text:        #1e2530;   /* Deep rich dark text */
+  --clr-text-muted:  #5c6470;   /* Warm muted gray */
+  --clr-text-faint:  #949da9;   /* Faint warm gray */
 
-  --clr-border:      rgba(0, 0, 0, 0.1);
-  --clr-border-cyan: rgba(0, 136, 170, 0.30);
+  /* Borders & Dividers */
+  --clr-border:      rgba(180, 140, 120, 0.15); /* Soft warm border */
+  --clr-border-cyan: rgba(230, 126, 34, 0.30);
 }
 
 /* Theme Toggle Button Style */
