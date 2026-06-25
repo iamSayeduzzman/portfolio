@@ -1,4 +1,3 @@
-```markdown
 # Personal Portfolio Website 🚀
 
 A modern, responsive, and fully dynamic personal portfolio website built with Vanilla HTML, CSS, and JavaScript. The design features a beautiful "Dark space" glassmorphism theme with a smooth light/dark mode toggle.
@@ -64,8 +63,5 @@ Simply open the `index.html` file in your favorite web browser. No local server 
 
 *Built with ♡ and Vanilla JS*
 
-```
-
-এই `README.md` ফাইলটি আপনার রিপোজিটরিতে দারুণ মানাবে। কেউ আপনার কোড ব্যবহার করতে চাইলে প্রথমেই আপনার দেওয়া সুন্দর বার্তাটি দেখতে পাবে!
 
 ```
