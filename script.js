@@ -32,9 +32,9 @@ const experienceData = [
 ];
 
 const projects = [
-    {
+  {
     title: "GitHub Explorer",
-    category: "web-dev", "app-dev",
+    category: "web-dev",
     icon: "🙋🏻‍♂️",
     description: "Production-ready dashboard UI built with Next.js 16, Shadcn UI, TypeScript and Tailwind CSS.",
     tags: ["React", "Redux Toolkit", "RTK Query", "React Query","Node.js", "SASS"],
