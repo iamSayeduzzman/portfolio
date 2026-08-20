@@ -32,11 +32,19 @@ const experienceData = [
 ];
 
 const projects = [
+   {
+    title: "Expense Tracker",
+    category: "web-dev",
+    icon: "💸💳🔎",
+    description: "Developed RESTful APIs with Node.js and Express.js and integrated MongoDB for persistent transaction storage.",
+    tags: ["React", "Redux Toolkit", "Express.js", "MongoDB","Node.js", "SASS"],
+    github: "https://github.com/iamSayeduzzman/expense-tracker",
+  },
   {
     title: "GitHub Explorer",
-    category: "web-dev", "app-dev",
+    category: "web-dev",
     icon: "🙋🏻‍♂️",
-    description: "Production-ready dashboard UI built with Next.js 16, Shadcn UI, TypeScript and Tailwind CSS.",
+    description: "Integrated the GitHub REST API using RTK Query and React Query, leveraging server-state management, caching, asynchronous data fetching, and loading/error handling.",
     tags: ["React", "Redux Toolkit", "RTK Query", "React Query","Node.js", "SASS"],
     github: "https://github.com/iamSayeduzzman/github-user-explorer",
   },
