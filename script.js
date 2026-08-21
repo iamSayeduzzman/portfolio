@@ -10,24 +10,59 @@ const educationData = [
 
 const experienceData = [
   {
-    title: "Chief Technology Officer (CTO)",
+    category: "Software Development Experience",
+    title: "WordPress Developer & Digital Marketing Lead",
+    company: "EK International Trade & Training Centre",
+    duration: "January 2026 - Present",
+    responsibilities: [
+      "Managed and maintained the company's WordPress website, and led Facebook marketing campaigns including ad setup and audience targeting.",
+      "Oversaw the company's social media presence and digital strategy to support business growth and client acquisition.",
+      "Provided hardware, software, and network troubleshooting support, and logged/escalated incidents through the ticketing system.",
+      "Performed routine system updates, maintenance, and health checks, and documented standard troubleshooting procedures.",
+    ],
+  },
+  {
+    category: "Software Development Experience",
+    title: "Full-Stack Developer & Technical Lead",
     company: "Gadgetaloy",
     duration: "April 2025 - December 2025",
     responsibilities: [
       "Managed technical operations of the website and digital platforms.",
-      "Architected Inventory Grid backbone to the business system.",
-      "Responsible for software development, support and system maintenance.",
+      "Architected the inventory grid backbone that powers the core business system.",
+      "Responsible for software development, support, and system maintenance.",
     ],
   },
   {
-    title: "Intern",
+    category: "Software Development Experience",
+    title: "Software Development Intern",
     company: "FN Software & Institute",
     duration: "August 2020 - December 2021",
     responsibilities: [
-      "Translated UI mockups (Figma/PSD) into pixel-perfect and cross-browser compatible web pages.",
+      "Translated UI mockups (Figma/PSD) into pixel-perfect, cross-browser compatible web pages.",
       "Handled minor backend tasks and collaborated with the team to optimize web performance.",
     ],
     certificate: "https://drive.google.com/file/d/172okFcIuAEl2KrM_jrtnUSGiUnzVjR2J/view?usp=sharing",
+  },
+  {
+    category: "Additional Professional Experience",
+    title: "Social Media Manager",
+    company: "JB Tower Trade LTD",
+    duration: "October 2024 - February 2025",
+    responsibilities: [
+      "Managed the company's Facebook page, including content scheduling, branding consistency, and ad campaign execution.",
+      "Handled page inquiries and audience engagement, and tracked basic analytics to optimize content strategy.",
+    ],
+  },
+  {
+    category: "Additional Professional Experience",
+    title: "Game Tester",
+    company: "Auleek",
+    duration: "June 2026 - July 2026",
+    type: "Project-Based, Night Shift",
+    responsibilities: [
+      "Tested gameplay across Survival, Crafting, Racing, Simulator, and Open-World titles, including edge-case and boundary testing.",
+      "Identified, reproduced, and documented functional, visual, and performance bugs for the development team.",
+    ],
   },
 ];
 
@@ -262,8 +297,12 @@ function renderCertificates() {
 
 function renderExperience() {
   const timeline = document.getElementById("experienceTimeline");
+  
+  // Group experiences by category
+  const softwareDev = experienceData.filter(job => job.category === "Software Development Experience");
+  const additionalExp = experienceData.filter(job => job.category === "Additional Professional Experience");
 
-  timeline.innerHTML = experienceData.map((job) => `
+  const softwareDevHTML = softwareDev.map((job) => `
     <div class="timeline-item" style="margin-bottom: 30px; padding: 20px; background: rgba(255,255,255,0.02); border-left: 3px solid #00d4ff;">
       <h3 style="color: #fff;">${job.title}</h3>
       <h4 style="color: #00d4ff; margin: 5px 0;">${job.company}</h4>
@@ -271,9 +310,34 @@ function renderExperience() {
       <ul style="margin-top: 15px; padding-left: 20px; color: #ccc;">
         ${job.responsibilities.map((item) => `<li style="margin-bottom: 8px;">${item}</li>`).join("")}
       </ul>
-      ${job.certificate ? `<a href="${job.certificate}" target="_blank" style="display: inline-block; margin-top: 15px; color: #00d4ff; text-decoration: none;">View Internship Certificate ➔</a>` : ""}
+      ${job.certificate ? `<a href="${job.certificate}" target="_blank" style="display: inline-block; margin-top: 15px; color: #00d4ff; text-decoration: none;">View certificate ➔</a>` : ""}
     </div>
   `).join("");
+
+  const additionalExpHTML = additionalExp.map((job) => `
+    <div class="timeline-item" style="margin-bottom: 30px; padding: 20px; background: rgba(255,255,255,0.02); border-left: 3px solid #00d4ff;">
+      <h3 style="color: #fff;">${job.title}</h3>
+      <h4 style="color: #00d4ff; margin: 5px 0;">${job.company}</h4>
+      <p style="color: #aaa; font-size: 0.9rem;">${job.duration}</p>
+      ${job.type ? `<p style="color: #aaa; font-size: 0.9rem; font-style: italic; margin-top: 5px;">${job.type}</p>` : ""}
+      <ul style="margin-top: 15px; padding-left: 20px; color: #ccc;">
+        ${job.responsibilities.map((item) => `<li style="margin-bottom: 8px;">${item}</li>`).join("")}
+      </ul>
+    </div>
+  `).join("");
+
+  const categoryHTML = `
+    <div style="margin-bottom: 50px;">
+      <h3 style="color: #00d4ff; font-size: 1.3rem; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px;">Software Development Experience</h3>
+      ${softwareDevHTML}
+    </div>
+    <div>
+      <h3 style="color: #00d4ff; font-size: 1.3rem; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px;">Additional Professional Experience</h3>
+      ${additionalExpHTML}
+    </div>
+  `;
+
+  timeline.innerHTML = categoryHTML;
 }
 
 function renderEducation() {
